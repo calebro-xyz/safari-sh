@@ -11,6 +11,8 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.15",
+    "@heroicons/react": "^2.0.18",
     "@types/node": "20.3.1",
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",
@@ -22,7 +24,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript-prettier": "^5.0.0",
     "eslint-config-next": "13.4.6",
-    "framer-motion": "^10.12.14",
+    "framer-motion": "^10.12.16",
     "next": "13.4.6",
     "next-auth": "^4.22.1",
     "postcss": "8.4.24",
@@ -35,18 +37,18 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^7.0.21",
-    "@storybook/addon-interactions": "^7.0.21",
-    "@storybook/addon-links": "^7.0.21",
-    "@storybook/blocks": "^7.0.21",
-    "@storybook/nextjs": "^7.0.21",
-    "@storybook/react": "^7.0.21",
-    "@storybook/testing-library": "^0.0.14-next.2",
+    "@storybook/addon-essentials": "^7.0.22",
+    "@storybook/addon-interactions": "^7.0.22",
+    "@storybook/addon-links": "^7.0.22",
+    "@storybook/blocks": "^7.0.22",
+    "@storybook/nextjs": "^7.0.22",
+    "@storybook/react": "^7.0.22",
+    "@storybook/testing-library": "0.0.14-next.2",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.9",
     "eslint-plugin-storybook": "^0.6.12",
-    "prisma": "^4.15.0",
-    "storybook": "^7.0.21",
+    "prisma": "^4.16.0",
+    "storybook": "^7.0.22",
     "vitest": "^0.32.2"
   }
 }
