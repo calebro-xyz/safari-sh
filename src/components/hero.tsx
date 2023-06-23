@@ -1,35 +1,71 @@
 import Image from "next/image";
 
+const incentive: any[] = [
+  {
+    name: "Free shipping",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce/icons/icon-shipping-simple.svg",
+    description:
+      "It's not actually free we just price it into the products. Someone's paying for it, and it's not us.",
+  },
+  {
+    name: "10-year warranty",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce/icons/icon-warranty-simple.svg",
+    description:
+      "If it breaks in the first 10 years we'll replace it. After that you're on your own though.",
+  },
+  {
+    name: "Exchanges",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce/icons/icon-exchange-simple.svg",
+    description:
+      "If you don't like it, trade it to one of your friends for something of theirs. Don't send it here though.",
+  },
+];
+
 export default function Hero() {
   return (
-    <div className='py-32 overflow-hidden bg-background'>
-      <div className='px-6 mx-auto max-w-7xl lg:flex lg:px-8'>
-        <div className='grid max-w-2xl grid-cols-1 mx-auto gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8'>
-          <div className='lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8'>
-            <h2 className='text-3xl font-bold tracking-tight text-heading sm:text-4xl'>
-              Our people
+    <div className='bg-background'>
+      <div className='py-24 mx-auto max-w-7xl sm:px-2 sm:py-32 lg:px-4'>
+        <div className='max-w-2xl px-4 mx-auto lg:max-w-none'>
+          <div className='max-w-3xl'>
+            <h2 className='text-4xl font-bold tracking-tight text-heading'>
+              We built our business on customer service
             </h2>
-            <p className='mt-6 text-xl leading-8 text-content'>
-              Quasi est quaerat. Sit molestiae et. Provident ad dolorem
-              occaecati eos iste. Soluta rerum quidem minus ut molestiae velit
-              error quod. Excepturi quidem expedita molestias quas.
-            </p>
-            <p className='mt-6 text-base leading-7 text-content'>
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat. Quasi aperiam sit non sit neque reprehenderit.
+            <p className='mt-4 text-content'>
+              At the beginning at least, but then we realized we could make a
+              lot more money if we kinda stopped caring about that. Our new
+              strategy is to write a bunch of things that look really good in
+              the headlines, then clarify in the small print but hope people
+              dont actually read it.
             </p>
           </div>
-          <div className='flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents'>
-            <div className='flex-auto w-0 lg:ml-auto lg:w-auto lg:flex-none lg:self-end'>
-              <Image
-                height={100}
-                width={100}
-                src='https://images.pexels.com/photos/14609822/pexels-photo-14609822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-                alt=''
-                className='aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover'
-              />
-            </div>
+          <div className='grid grid-cols-1 mt-16 gap-x-8 gap-y-10 lg:grid-cols-3'>
+            {incentive.map((incentive: any) => (
+              <div
+                key={incentive.name}
+                className=' text-content sm:flex lg:block'
+              >
+                <div className='sm:flex-shrink-0'>
+                  <Image
+                    height={100}
+                    width={100}
+                    className='w-16 h-16 text-content'
+                    src={incentive.imageSrc}
+                    alt=''
+                  />
+                </div>
+                <div className='mt-4 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6'>
+                  <h3 className='text-sm font-medium text-gray-900'>
+                    {incentive.name}
+                  </h3>
+                  <p className='mt-2 text-sm text-gray-500'>
+                    {incentive.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
