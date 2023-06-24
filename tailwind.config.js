@@ -12,15 +12,15 @@ module.exports = {
     require("@tailwindcss/aspect-ratio", "@tailwindcss/forms", "@tailwindcss/line-clamp", "@tailwindcss/typography"),
   ],
   theme: {
-    colors: {
-      background: "#fffffe",
-      primary: "#078080",
-      secondary: "#f45d48",
-      tertary: "#f8f5f2",
-      heading: "#232323",
-      content: "#222525",
-    },
     extend: {
+      colors: {
+        background: "#fffffe",
+        primary: "#078080",
+        secondary: "#f45d48",
+        tertary: "#f8f5f2",
+        heading: "#232323",
+        content: "#222525",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

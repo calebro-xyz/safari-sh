@@ -18,10 +18,6 @@ const navigation = {
   ],
 };
 
-function classNames(...classes: any[]) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -66,7 +62,7 @@ export default function Navbar() {
                     />
                   </button>
                 </div>
-
+                {/* Mobile menu pages */}
                 <div className='px-4 py-6 space-y-6 border-t border-gray-200'>
                   {navigation.pages.map((page) => (
                     <div key={page.name} className='flow-root'>
@@ -210,7 +206,7 @@ export default function Navbar() {
                   </div>
 
                   <div className='hidden h-full lg:flex'>
-                    {/* Mega menus */}
+                    {/*  Pages Nav Desktop*/}
                     <Popover.Group className='ml-8'>
                       <div className='flex justify-center h-full space-x-8'>
                         {navigation.pages.map((page) => (
