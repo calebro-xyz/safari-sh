@@ -1,71 +1,72 @@
 import Image from "next/image";
 
-const incentive: any[] = [
-  {
-    name: "Free shipping",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce/icons/icon-shipping-simple.svg",
-    description:
-      "It's not actually free we just price it into the products. Someone's paying for it, and it's not us.",
-  },
-  {
-    name: "10-year warranty",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce/icons/icon-warranty-simple.svg",
-    description:
-      "If it breaks in the first 10 years we'll replace it. After that you're on your own though.",
-  },
-  {
-    name: "Exchanges",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce/icons/icon-exchange-simple.svg",
-    description:
-      "If you don't like it, trade it to one of your friends for something of theirs. Don't send it here though.",
-  },
-];
-
 export default function Hero() {
   return (
-    <div className='bg-background'>
-      <div className='py-24 mx-auto max-w-7xl sm:px-2 sm:py-32 lg:px-4'>
-        <div className='max-w-2xl px-4 mx-auto lg:max-w-none'>
-          <div className='max-w-3xl'>
-            <h2 className='text-4xl font-bold tracking-tight text-heading'>
-              We built our business on customer service
+    <div className='py-24 overflow-hidden bg-background'>
+      <div className='px-6 mx-auto max-w-7xl lg:flex lg:px-8'>
+        <div className='grid max-w-2xl grid-cols-1 mx-auto gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8'>
+          <div className='lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8'>
+            <h2 className='text-3xl font-bold tracking-tight text-heading sm:text-4xl'>
+              Our people
             </h2>
-            <p className='mt-4 text-content'>
-              At the beginning at least, but then we realized we could make a
-              lot more money if we kinda stopped caring about that. Our new
-              strategy is to write a bunch of things that look really good in
-              the headlines, then clarify in the small print but hope people
-              dont actually read it.
+            <p className='mt-6 text-xl leading-8 text-content'>
+              Quasi est quaerat. Sit molestiae et. Provident ad dolorem
+              occaecati eos iste. Soluta rerum quidem minus ut molestiae velit
+              error quod. Excepturi quidem expedita molestias quas.
             </p>
-          </div>
-          <div className='grid grid-cols-1 mt-16 gap-x-8 gap-y-10 lg:grid-cols-3'>
-            {incentive.map((incentive: any) => (
-              <div
-                key={incentive.name}
-                className=' text-content sm:flex lg:block'
+            <p className='mt-6 text-base leading-7 text-content'>
+              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
+              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
+              fugiat. Quasi aperiam sit non sit neque reprehenderit.
+            </p>
+            <div className='flex mt-10'>
+              <a
+                href='#'
+                className='rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-tertiary shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
               >
-                <div className='sm:flex-shrink-0'>
-                  <Image
-                    height={100}
-                    width={100}
-                    className='w-16 h-16 text-content'
-                    src={incentive.imageSrc}
-                    alt=''
-                  />
-                </div>
-                <div className='mt-4 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6'>
-                  <h3 className='text-sm font-medium text-gray-900'>
-                    {incentive.name}
-                  </h3>
-                  <p className='mt-2 text-sm text-gray-500'>
-                    {incentive.description}
-                  </p>
-                </div>
+                start traveling<span aria-hidden='true'>&rarr;</span>
+              </a>
+            </div>
+          </div>
+          <div className='flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents'>
+            <div className='flex-auto w-0 lg:ml-auto lg:w-auto lg:flex-none lg:self-end'>
+              <Image
+                height={500}
+                width={500}
+                src='https://images.pexels.com/photos/33045/lion-wild-africa-african.jpg?auto=compress&cs=tinysrgb&w=1600'
+                alt=''
+                className='aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover'
+              />
+            </div>
+            <div className='contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8'>
+              <div className='flex self-end justify-end flex-none order-first w-64 lg:w-auto'>
+                <Image
+                  height={500}
+                  width={500}
+                  src='https://images.pexels.com/photos/259554/pexels-photo-259554.jpeg?auto=compress&cs=tinysrgb&w=1600'
+                  alt=''
+                  className='aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover'
+                />
               </div>
-            ))}
+              <div className='flex justify-end flex-auto w-96 lg:w-auto lg:flex-none'>
+                <Image
+                  height={500}
+                  width={500}
+                  src='https://images.pexels.com/photos/3772630/pexels-photo-3772630.jpeg?auto=compress&cs=tinysrgb&w=1600'
+                  alt=''
+                  className='aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover'
+                />
+              </div>
+              <div className='hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none'>
+                <Image
+                  height={500}
+                  width={500}
+                  src='https://images.pexels.com/photos/33154/leopard-leopard-head-wildlife-big-cat.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                  alt=''
+                  className='aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover'
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

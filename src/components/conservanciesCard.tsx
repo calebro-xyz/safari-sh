@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Balancer from "react-wrap-balancer";
+
 const content = [
   {
     name: "Amboseli National Park",
@@ -15,7 +16,7 @@ const content = [
   },
 ];
 
-export default function ParkCard() {
+export default function ConservanciesCard() {
   return (
     <ul role='list' className='shadow w-96'>
       {content.map((content) => (

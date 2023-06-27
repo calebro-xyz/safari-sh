@@ -13,8 +13,8 @@ const navigation = {
   pages: [
     { name: "Countries", href: "#" },
     { name: "National Parks", href: "#" },
-    { name: "Blog", href: "#" },
     { name: "Conservancies", href: "#" },
+    { name: "Blog", href: "#" },
   ],
 };
 
@@ -160,7 +160,7 @@ export default function Navbar() {
                 </div>
               </form> */}
 
-              <p className='flex-1 text-sm font-medium text-center text-tertary lg:flex-none'>
+              <p className='justify-between flex-1 text-sm font-medium text-center text-tertary'>
                 Get your travel business listed on safari.sh -{" "}
                 <Link href='/pricing' className='underline'>
                   pricing
@@ -188,7 +188,7 @@ export default function Navbar() {
 
           {/* Secondary navigation */}
           <div className='bg-background'>
-            <div className='px-4 mx-auto max-w-7xl sm:px-6 lg:px-8'>
+            <div className='max-w-full px-4 mx-auto sm:px-6 lg:px-8'>
               <div className='border-b border-gray-200'>
                 <div className='flex items-center justify-between h-16'>
                   {/* Logo (lg+) */}
