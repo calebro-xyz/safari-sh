@@ -31,37 +31,37 @@ export default function ParkCard() {
               src={content.imageUrl}
               alt='national park image'
             />
-            <h3 className='mt-6 text-base font-semibold text-content'>
+            <div className='flex self-center gap-2 p-4'>
+              <div className='mt-2'>
+                <span className='items-center px-4 py-2 text-sm text-green-700 rounded-full bg-green-50 ring-1 ring-inset ring-green-600/20'>
+                  {content.country}
+                </span>
+              </div>
+              <div className='mt-2'>
+                <span className='items-center px-4 py-2 text-sm text-pink-700 rounded-full bg-pink-50 ring-1 ring-inset ring-pink-600/20'>
+                  {content.continent}
+                </span>
+              </div>
+              <div className='mt-2'>
+                <span className='items-center px-4 py-2 text-sm rounded-full text-sky-700 bg-sky-50 ring-1 ring-inset ring-sky-600/20'>
+                  {content.nature}
+                </span>
+              </div>
+              <div className='mt-2'>
+                <span className='items-center px-4 py-2 text-sm text-purple-700 rounded-full bg-purple-50 ring-1 ring-inset ring-purple-600/20'>
+                  {content.hiking}
+                </span>
+              </div>
+            </div>
+            <h3 className='mt-2 mb-2 font-semibold text-md text-content'>
               {content.name}
             </h3>
             <dl className='flex flex-col justify-between flex-grow mt-1'>
               <dt className='sr-only'>Title</dt>
-              <dd className='text-base tracking-tighter text-center text-heading'>
+              <dd className='px-8 mb-6 text-base tracking-tighter text-justify text-heading '>
                 <Balancer>{content.title}</Balancer>
               </dd>
               <dt className='sr-only'>Role</dt>
-              <div className='flex items-center gap-2 p-4'>
-                <dd className='mt-2'>
-                  <span className='items-center px-4 py-2 text-sm text-green-700 rounded-full bg-green-50 ring-1 ring-inset ring-green-600/20'>
-                    {content.country}
-                  </span>
-                </dd>
-                <dd className='mt-2'>
-                  <span className='items-center px-4 py-2 text-sm text-pink-700 rounded-full bg-pink-50 ring-1 ring-inset ring-pink-600/20'>
-                    {content.continent}
-                  </span>
-                </dd>
-                <dd className='mt-2'>
-                  <span className='items-center px-4 py-2 text-sm rounded-full text-sky-700 bg-sky-50 ring-1 ring-inset ring-sky-600/20'>
-                    {content.nature}
-                  </span>
-                </dd>
-                <dd className='mt-2'>
-                  <span className='items-center px-4 py-2 text-sm text-purple-700 rounded-full bg-purple-50 ring-1 ring-inset ring-purple-600/20'>
-                    {content.hiking}
-                  </span>
-                </dd>
-              </div>
             </dl>
           </div>
           <div>
